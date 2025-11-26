@@ -6,15 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>Braedon Long — Make Tech Work for You</title>
+    <title>Scaling Local Success</title>
     <meta
       name="description"
-      content="I build reliable backend, analytics, and AI systems so you can focus on growing your business — even if you’re not technical."
+      content="You're great at what you do, save time and money with a tech stack that works for you."
     />
-    <meta property="og:title" content="Braedon Long — Make Tech work for You" />
+    <meta property="og:title" content="Scaling Local Success" />
     <meta
       property="og:description"
-      content="I build reliable backend, analytics, and AI systems so you can focus on growing your business — even if you’re not technical."
+      content="You're great at what you do, save time and money with a tech stack that works for you."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://blong.dev/" />
@@ -22,6 +22,12 @@
     <meta property="og:image" content="https://blong.dev/bee1.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="blong.dev — Make Tech work for You" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- robots.txt placeholder -->
     <!-- sitemap.xml placeholder -->
     <link rel="stylesheet" href="styles.css" />
@@ -30,10 +36,11 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav" aria-label="Primary">
-        <div class="nav-brand">
+        <a class="nav-brand" href="https://blong.dev" aria-label="blong.dev home">
+          <img class="nav-brand__logo" src="static/Bee1.png" alt="blong.dev logo" width="28" height="28" />
           <span aria-hidden="true">blong.dev</span>
-          <span class="visually-hidden">blong.dev</span>
-        </div>
+          <span class="visually-hidden">blong.dev home</span>
+        </a>
         <button
           class="nav-toggle"
           type="button"
@@ -56,20 +63,40 @@
       <section id="home" class="section hero" aria-labelledby="home-title">
         <div class="hero__bg parallax" aria-hidden="true"></div>
         <div class="container hero__content">
-          <p class="eyebrow">Make Technology Work <em>For</em> You</p>
-          <h1 id="home-title">Clarify. Simplify. Implement. Grow.</h1>
-          <p class="lead">
-              I help small businesses turn scattered tools and ideas into reliable systems — websites, automations,
-              vendors, and AI workflows that feel simple, not overwhelming.
-          </p>
+          <h1 id="home-title">
+            <span class="hero__title-line">Make Technology</span>
+            <span class="hero__title-line">Work For You</span>
+          </h1>
+          <div class="hero-body">
+            <ul class="hero-points" aria-label="What I help with">
+              <li class="hero-points__item">
+                <img src="static/beehive-black.png" alt="Beehive icon" class="hero-points__icon" />
+                <span class="hero-points__text">Web Presence</span>
+              </li>
+              <li class="hero-points__item">
+                <img src="static/workerbee-black.png" alt="Worker bee icon" class="hero-points__icon" />
+                <span class="hero-points__text">Automations</span>
+              </li>
+              <li class="hero-points__item">
+                <img src="static/honeycomb-black.png" alt="Honeycomb icon" class="hero-points__icon" />
+                <span class="hero-points__text">AI Consulting</span>
+              </li>
+            </ul>
+          </div>
           <div class="cta-group">
-            <a class="btn btn-primary" href="#contact">Work with me</a>
+            <a
+              class="btn btn-primary"
+              href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/strategy-session'}); return false;"
+              aria-label="Schedule time with me"
+            >Work with me</a>
             <a class="btn btn-secondary" href="#contact">Contact</a>
           </div>
+          <img class="hero__bee" src="static/Bee1.png" alt="" aria-hidden="true" />
         </div>
       </section>
 
-      <section id="services" class="section" aria-labelledby="services-title">
+      <section id="services" class="section section--tinted" aria-labelledby="services-title">
         <div class="container flow">
           <div class="section-header">
             <p class="eyebrow">Work I Do</p>
@@ -149,7 +176,7 @@
   </div>
 </section>
 
-      <section id="reviews" class="section" aria-labelledby="reviews-title">
+      <section id="reviews" class="section section--tinted" aria-labelledby="reviews-title">
         <div class="container flow">
           <div class="section-header">
             <p class="eyebrow">Client words</p>
@@ -211,21 +238,6 @@
           <div class="flow">
             <p class="eyebrow">Contact</p>
             <h2 id="contact-title">Let’s explore where we can get stuff done.</h2>
-            <p>
-              Share a little context below and I’ll respond within a business day. 
-            </p>
-            <p>
-              Prefer to book directly?
-            </p>
-            <a class="cal-link" href="#calendly" aria-label="Open Calendly placeholder link"
-              ><!-- Calendly link widget begin -->
-              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-              <a href=""
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/strategy-session'});return false;">Schedule
-                time with me</a>
-              <!-- Calendly link widget end --></a
-            >
           </div>
           <form class="contact-form flow" id="contact-form" novalidate action="https://formspree.io/f/xgvnlapj" method="POST">
             <div class="form-field">
@@ -246,7 +258,7 @@
               <span class="error" id="email-error"></span>
             </div>
             <div class="form-field">
-              <label for="message">Message</label>
+              <label for="message">Share a little about your opportunities!</label>
               <textarea
                 id="message"
                 name="message"
@@ -258,12 +270,29 @@
             </div>
             <button class="btn btn-primary" type="submit">Send message</button>
           </form>
+          <div class="cal-cta" aria-label="Open Calendly popup">
+            <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <div class="cal-cta__row">
+              <p>Prefer to book directly?</p>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/strategy-session'}); return false;"
+              >
+                Schedule Time With Me
+              </button>
+            </div>
+            <img src="static/QR light orange.png" alt="QR code to schedule time with me" class="cal-cta__qr" />
+            <!-- Calendly link widget end -->
+          </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
       <div class="container footer__content">
-        <p>&copy; <span id="year"></span> Braedon Long. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Blong Enterprises LLC. All rights reserved.</p>
         <div class="footer-links">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
