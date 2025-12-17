@@ -203,7 +203,6 @@ p {
   font-size: clamp(1.5rem, 1.6vw + 1.3rem, 2.2rem);
   color: var(--fg);
   text-align: left;
-  justify-items: left;
 }
 
 .hero-points__item {
@@ -761,6 +760,7 @@ p {
 
   .hero {
     padding-bottom: clamp(3rem, 10vw, 5rem);
+    padding-inline: var(--space-2);
   }
 
   .hero-body {
@@ -768,6 +768,11 @@ p {
     min-height: clamp(10rem, 30vw, 14rem);
     padding-bottom: clamp(2.5rem, 8vw, 4rem);
     margin-top: var(--space-2);
+  }
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
   }
 
   .hero__bee {
