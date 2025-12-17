@@ -420,12 +420,13 @@ p {
 .services-transition {
   margin: var(--space-3) auto;
   padding: var(--space-2);
-  max-width: min(28rem, 90vw);
+  max-width: min(70rem, 90vw);
   text-align: center;
   font-size: var(--step--1);
   border-radius: var(--radius-md);
   box-shadow: 0 12px 24px rgba(31, 31, 31, 0.08);
 }
+
 
 .service-card {
   min-width: 0;
@@ -456,6 +457,16 @@ p {
   color: var(--fg-muted);
   align-content: start;
 }
+
+.service-transition-card__list {
+  margin: 0;
+  padding-left: 1.5rem;
+  text-align: left;
+  display: grid;
+  gap: var(--space-1);
+  color: var(--fg);
+}
+
 .section--tinted::before {
   content: "";
   position: absolute;
@@ -472,21 +483,21 @@ p {
 }
 
 .tune-up,
-.membership,
-.retainer {
+.retainer,
+.build-out {
   overflow: hidden;
 }
 
 .tune-up__layout,
-.membership__layout,
-.retainer__layout {
+.retainer__layout,
+.build-out__layout {
   align-items: stretch;
   gap: var(--space-4);
 }
 
 .tune-up-list,
-.membership-list,
-.retainer-list {
+.retainer-list,
+.build-out-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -496,15 +507,15 @@ p {
 }
 
 .tune-up-list li,
-.membership-list li,
-.retainer-list li {
+.retainer-list li,
+.build-out-list li {
   position: relative;
   padding-left: 1.75rem;
 }
 
 .tune-up-list li::before,
-.membership-list li::before,
-.retainer-list li::before {
+.retainer-list li::before,
+.build-out-list li::before {
   content: "";
   position: absolute;
   left: 0.35rem;
@@ -517,24 +528,24 @@ p {
 }
 
 .tune-up__cta,
-.membership__cta,
-.retainer__cta {
+.retainer__cta,
+.build-out__cta {
   justify-content: flex-start;
   align-items: flex-start;
   gap: var(--space-1);
 }
 
 .tune-up__note,
-.membership__note,
-.retainer__note {
+.retainer__note,
+.build-out__note {
   font-size: var(--step--1);
   color: var(--fg-muted);
   max-width: 28rem;
 }
 
 .tune-up-card,
-.membership-card,
-.retainer-card {
+.retainer-card,
+.build-out-card {
   background: var(--surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -544,16 +555,16 @@ p {
 }
 
 .tune-up-highlights,
-.membership-highlights,
-.retainer-highlights {
+.retainer-highlights,
+.build-out-highlights {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-1);
 }
 
 .tune-up-pill,
-.membership-pill,
-.retainer-pill {
+.retainer-pill,
+.build-out-pill {
   display: inline-flex;
   align-items: center;
   gap: var(--space-0);
@@ -564,8 +575,8 @@ p {
 }
 
 .tune-up-pill__label,
-.membership-pill__label,
-.retainer-pill__label {
+.retainer-pill__label,
+.build-out-pill__label {
   font-size: var(--step--1);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -573,15 +584,15 @@ p {
 }
 
 .tune-up-pill__value,
-.membership-pill__value,
-.retainer-pill__value {
+.retainer-pill__value,
+.build-out-pill__value {
   font-weight: 700;
   color: var(--fg);
 }
 
 .tune-up-card__body,
-.membership-card__body,
-.retainer-card__body {
+.retainer-card__body,
+.build-out-card__body {
   color: var(--fg);
   padding-top: var(--space-3);
 }
