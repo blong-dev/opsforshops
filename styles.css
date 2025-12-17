@@ -557,9 +557,10 @@ p {
 .tune-up-highlights,
 .retainer-highlights,
 .build-out-highlights {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: var(--space-1);
+  justify-items: start;
+  align-items: start;
 }
 
 .tune-up-pill,
@@ -758,7 +759,7 @@ p {
 .site-footer {
   padding: var(--space-3) 0;
   border-top: 1px solid rgba(31, 31, 31, 0.08);
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--accent);
 }
 
 .footer__content {
