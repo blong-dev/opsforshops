@@ -54,7 +54,6 @@
           <li><a class="nav-link is-active" href="#home">Home</a></li>
           <li><a class="nav-link" href="#services">Services</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#reviews">Reviews</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -91,7 +90,7 @@
               aria-label="Schedule time with me"
             >Book a Call</a>
             <a class="btn btn-secondary" href="#contact">Project Inquiry</a>
-            <a class="btn btn-secondary" href="#audit">Small Business Tune-Up</a>
+            <a class="btn btn-secondary" href="#tune-up">Small Business Tune-Up</a>
           </div>
           <img class="hero__bee" src="static/Bee1.png" alt="" aria-hidden="true" />
         </div>
@@ -106,64 +105,56 @@
             <h2 id="services-title">Systems that make the owner more free, not more managed.</h2>
             <p>From point of sale to AI-enabled workflows, I help businesses create digital systems that stay reliable and make room for growth.</p>
           </div>
-          <div class="carousel" data-carousel="services">
-            <button
-              class="carousel__arrow"
-              type="button"
-              data-direction="prev"
-              aria-label="Previous service"
-            >
-              &#8592;
-            </button>
-            <ul class="carousel__track" role="list">
-              <li class="card">
-                <h3>Systems</h3>
-                <p>Navigate vendors with confidence; get the services you need.</p>
-              </li>
-              <li class="card">
-                <h3>Automation</h3>
-                <p>Streamlined workflows that give you time back.</p>
-              </li>
-              <li class="card">
-                <h3>Web Development</h3>
-                <p>Websites that convert and are easy to maintain.</p>
-              </li>
-              <li class="card">
-                <h3>AI</h3>
-                <p>Understand and implement tools that work, not just shiny toys.</p>
-              </li>
-              <li class="card">
-                <h3>Analytics</h3>
-                <p>Plan and build dashboards that deliver actionable insights.</p>
-              </li>
-            </ul>
-            <button
-              class="carousel__arrow"
-              type="button"
-              data-direction="next"
-              aria-label="Next service"
-            >
-              &#8594;
-            </button>
+          <div class="services-grid" role="list">
+            <article class="card service-card" role="listitem">
+              <h3>Systems</h3>
+              <p class="service-card__desc">Navigate vendors with confidence and get the services you actually need.</p>
+              <ul class="service-card__list">
+                <li>Solve technology bottlenecks</li>
+                <li>Make decisions with confidence</li>
+                <li>Implementation plan your team can own</li>
+              </ul>
+            </article>
+            <article class="card service-card" role="listitem">
+              <h3>Automations</h3>
+              <p class="service-card__desc">Streamline or handoff workflows so your team gets hours back every week.</p>
+              <ul class="service-card__list">
+                <li>Map processes end-to-end</li>
+                <li>Prioritize quick wins with ROI</li>
+                <li>Ship automations with handoff docs</li>
+              </ul>
+            </article>
+            <article class="card service-card" role="listitem">
+              <h3>Websites</h3>
+              <p class="service-card__desc">Build sites that work for you, are simple to edit, and stay fast and secure.</p>
+              <ul class="service-card__list">
+                <li>Sell your product online</li>
+                <li>Show up on Google</li>
+                <li>Easy editing so you can update content</li>
+              </ul>
+            </article>
           </div>
+        </div>
+        <div class="services-transition">
+         <h3 id="services-transition">-- How it works -- </h3>
         </div>
       </section>
 
-      <section id="audit" class="section audit" aria-labelledby="audit-title">
-        <div class="container grid audit__layout">
+      <section id="tune-up" class="section tune-up" aria-labelledby="tune-up-title">
+        <div class="container grid tune-up__layout">
           <div class="flow">
             <p class="eyebrow">Small Business Tune-Up</p>
-            <h2 id="audit-title">In 90 minutes, we find our first win.</h2>
+            <h2 id="tune-up-title">In 90 minutes, we find our first win.</h2>
             <p class="lead">
-              We trace your flow end to end (sales -> delivery -> cash -> ops), find the three highest-leverage automations,
-              and ship a two-week action plan you can execute immediately.
+              You understand your world better than anyone. Let's get to the nuts and bolts of where technology can help you move faster, save money, and reduce stress.
             </p>
-            <ul class="audit-list">
-              <li><strong>Evaluation:</strong> map workflows across teams and tools.</li>
+            <p>We can:</p>
+            <ul class="tune-up-list">
+              <li><strong>Evaluate:</strong> map workflows across teams and tools.</li>
               <li><strong>Diagnose:</strong> identify pain points and high margin plays.</li>
               <li><strong>Ship:</strong> immediate action plan with defined effort and immediate impact.</li>
             </ul>
-            <div class="cta-group audit__cta">
+            <div class="cta-group tune-up__cta">
               <a
                 class="btn btn-primary"
                 href=""
@@ -173,30 +164,138 @@
               
             </div>
           </div>
-          <div class="audit-card flow" aria-label="Audit deliverables overview">
+          <div class="tune-up-card flow" aria-label="Tune-Up deliverables overview">
             <div>
               <p class="eyebrow">What you leave with</p>
               <h3>Clarity, confidence, and a clocked plan.</h3>
             </div>
-            <div class="audit-highlights">
-              <div class="audit-pill">
-                <span class="audit-pill__label">Duration</span>
-                <span class="audit-pill__value">90 minutes</span>
+            <div class="tune-up-highlights">
+              <div class="tune-up-pill">
+                <span class="tune-up-pill__label">Duration</span>
+                <span class="tune-up-pill__value">90 minutes</span>
               </div>
-              <div class="audit-pill">
-                <span class="audit-pill__label">Delivery</span>
-                <span class="audit-pill__value">48 hours</span>
+              <div class="tune-up-pill">
+                <span class="tune-up-pill__label">Delivery</span>
+                <span class="tune-up-pill__value">48 hours</span>
               </div>
-              <div class="audit-pill">
-                <span class="audit-pill__label">Format</span>
-                <span class="audit-pill__value">Live working session</span>
+              <div class="tune-up-pill">
+                <span class="tune-up-pill__label">Format</span>
+                <span class="tune-up-pill__value">Live working session</span>
               </div>
             </div>
-            <p class="audit-card__body">
+            <p class="tune-up-card__body">
               You're already great at what you do. Technology is expensive and takes time to figure out. Let's get it right the first time.
             </p>
-            <p class="audit-card__body">
-              Early Bird Special: Pick your price. We meet and consult; you tell me what it's worth to you.
+            <p class="tune-up-card__body">
+              Early Bird Special: $250
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="membership" class="section membership" aria-labelledby="membership-title">
+        <div class="container grid membership__layout">
+          <div class="flow">
+            <p class="eyebrow">Small Business Tune-Up</p>
+            <h2 id="membership-title">In 90 minutes, we find our first win.</h2>
+            <p class="lead">
+              You understand your world better than anyone. Let's get to the nuts and bolts of where technology can help you move faster, save money, and reduce stress.
+            </p>
+            <p>We can:</p>
+            <ul class="membership-list">
+              <li><strong>Evaluate:</strong> map workflows across teams and tools.</li>
+              <li><strong>Diagnose:</strong> identify pain points and high margin plays.</li>
+              <li><strong>Ship:</strong> immediate action plan with defined effort and immediate impact.</li>
+            </ul>
+            <div class="cta-group membership__cta">
+              <a
+                class="btn btn-primary"
+                href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/strategy-session'}); return false;"
+                aria-label="Book Small Business Tune-Up"
+              >Book Your Tune-Up</a>
+              
+            </div>
+          </div>
+          <div class="membership-card flow" aria-label="Tune-Up deliverables overview">
+            <div>
+              <p class="eyebrow">What you leave with</p>
+              <h3>Clarity, confidence, and a clocked plan.</h3>
+            </div>
+            <div class="membership-highlights">
+              <div class="membership-pill">
+                <span class="membership-pill__label">Duration</span>
+                <span class="membership-pill__value">90 minutes</span>
+              </div>
+              <div class="membership-pill">
+                <span class="membership-pill__label">Delivery</span>
+                <span class="membership-pill__value">48 hours</span>
+              </div>
+              <div class="membership-pill">
+                <span class="membership-pill__label">Format</span>
+                <span class="membership-pill__value">Live working session</span>
+              </div>
+            </div>
+            <p class="membership-card__body">
+              You're already great at what you do. Technology is expensive and takes time to figure out. Let's get it right the first time.
+            </p>
+            <p class="membership-card__body">
+              Monthly Rate: $250
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="retainer" class="section retainer" aria-labelledby="retainer-title">
+        <div class="container grid retainer__layout">
+          <div class="flow">
+            <p class="eyebrow">Small Business Tune-Up</p>
+            <h2 id="retainer-title">In 90 minutes, we find our first win.</h2>
+            <p class="lead">
+              You understand your world better than anyone. Let's get to the nuts and bolts of where technology can help you move faster, save money, and reduce stress.
+            </p>
+            <p>We can:</p>
+            <ul class="retainer-list">
+              <li><strong>Evaluate:</strong> map workflows across teams and tools.</li>
+              <li><strong>Diagnose:</strong> identify pain points and high margin plays.</li>
+              <li><strong>Ship:</strong> immediate action plan with defined effort and immediate impact.</li>
+            </ul>
+            <div class="cta-group retainer__cta">
+              <a
+                class="btn btn-primary"
+                href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/strategy-session'}); return false;"
+                aria-label="Book Small Business Tune-Up"
+              >Book Your Tune-Up</a>
+              
+            </div>
+          </div>
+          <div class="retainer-card flow" aria-label="Tune-Up deliverables overview">
+            <div>
+              <p class="eyebrow">What you leave with</p>
+              <h3>Clarity, confidence, and a clocked plan.</h3>
+            </div>
+            <div class="retainer-highlights">
+              <div class="retainer-pill">
+                <span class="retainer-pill__label">Duration</span>
+                <span class="retainer-pill__value">90 minutes</span>
+              </div>
+              <div class="retainer-pill">
+                <span class="retainer-pill__label">Delivery</span>
+                <span class="retainer-pill__value">48 hours</span>
+              </div>
+              <div class="retainer-pill">
+                <span class="retainer-pill__label">Format</span>
+                <span class="retainer-pill__value">Live working session</span>
+              </div>
+            </div>
+            <p class="retainer-card__body">
+              You're already great at what you do. Technology is expensive and takes time to figure out. Let's get it right the first time.
+            </p>
+            <p class="retainer-card__body">
+              Monthly Rates starting at $500
             </p>
           </div>
         </div>
@@ -232,68 +331,13 @@
   </div>
 </section>
 
-      <section id="reviews" class="section" aria-labelledby="reviews-title">
-        <div class="container flow">
-          <div class="section-header">
-            <p class="eyebrow">Client words</p>
-            <h2 id="reviews-title">Testimonials that speak to momentum.</h2>
-          </div>
-          <div class="carousel" data-carousel="reviews">
-            <button
-              class="carousel__arrow"
-              type="button"
-              data-direction="prev"
-              aria-label="Previous testimonial"
-            >
-              &#8592;
-            </button>
-            <ul class="carousel__track" role="list">
-              <li class="card">
-                <p class="quote">
-                  "Braedon translated fuzzy founder intuition into a roadmap our engineers believed
-                  in."
-                </p>
-                <p class="cite">Alex M. — SaaS Founder</p>
-              </li>
-              <li class="card">
-                <p class="quote">
-                  "Workflows that once took days now run in minutes. The automation rollout was
-                  seamless."
-                </p>
-                <p class="cite">Jordan P. — Operations Lead</p>
-              </li>
-              <li class="card">
-                <p class="quote">
-                  "We shipped a new experiment every week without burning out. The cadence was a
-                  game changer."
-                </p>
-                <p class="cite">Taylor R. — Growth PM</p>
-              </li>
-              <li class="card">
-                <p class="quote">
-                  "Braedon brings calm clarity to chaotic environments and keeps teams laser-focused
-                  on outcomes."
-                </p>
-                <p class="cite">Morgan S. — Innovation Director</p>
-              </li>
-            </ul>
-            <button
-              class="carousel__arrow"
-              type="button"
-              data-direction="next"
-              aria-label="Next testimonial"
-            >
-              &#8594;
-            </button>
-          </div>
-        </div>
-      </section>
-
+      
       <section id="contact" class="section section--tinted" aria-labelledby="contact-title">
         <div class="container grid">
           <div class="flow">
             <p class="eyebrow">Contact</p>
             <h2 id="contact-title">Let's explore where we can get stuff done.</h2>
+
           </div>
           <form class="contact-form flow" id="contact-form" novalidate action="https://formspree.io/f/xgvnlapj" method="POST">
             <div class="form-field">
@@ -331,7 +375,8 @@
             <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
             <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
             <div class="cal-cta__row">
-              <p>Prefer to book directly?</p>
+              <p class="email">braedon@blong.dev</p></div>
+              <div class="cal-cta__spacer">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -339,9 +384,11 @@
               >
                 Schedule Time With Me
               </button>
+              
             </div>
             <img src="static\Cream QR.svg" alt="QR code to schedule time with me" class="cal-cta__qr" />
             <!-- Calendly link widget end -->
+
           </div>
         </div>
       </section>
@@ -349,11 +396,11 @@
     <footer class="site-footer">
       <div class="container footer__content">
         <p>&copy; <span id="year"></span> Blong Enterprises LLC. All rights reserved.</p>
+        <p>braedon@blong.dev</p>
         <div class="footer-links">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#about">About</a>
-          <a href="#reviews">Reviews</a>
           <a href="#contact">Contact</a>
         </div>
       </div>

@@ -99,6 +99,10 @@ a {
   scroll-margin-top: calc(var(--nav-height) + var(--space-1));
 }
 
+#services.section {
+  padding-bottom: var(--space-0);
+}
+
 .hero {
   min-height: clamp(70vh, 80vh, 90vh);
   display: flex;
@@ -406,6 +410,52 @@ p {
   overflow: hidden;
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+}
+
+.services-transition {
+  margin: var(--space-3) auto;
+  padding: var(--space-2);
+  max-width: min(28rem, 90vw);
+  text-align: center;
+  font-size: var(--step--1);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 24px rgba(31, 31, 31, 0.08);
+}
+
+.service-card {
+  min-width: 0;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border: 1px solid rgba(31, 31, 31, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 24px rgba(31, 31, 31, 0.08);
+}
+
+.service-card h3 {
+  margin: 0;
+}
+
+.service-card__desc {
+  margin: 0;
+  color: var(--fg);
+}
+
+.service-card__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--space-0);
+  color: var(--fg-muted);
+  align-content: start;
+}
 .section--tinted::before {
   content: "";
   position: absolute;
@@ -421,16 +471,22 @@ p {
   z-index: 1;
 }
 
-.audit {
+.tune-up,
+.membership,
+.retainer {
   overflow: hidden;
 }
 
-.audit__layout {
+.tune-up__layout,
+.membership__layout,
+.retainer__layout {
   align-items: stretch;
   gap: var(--space-4);
 }
 
-.audit-list {
+.tune-up-list,
+.membership-list,
+.retainer-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -439,12 +495,16 @@ p {
   max-width: 40rem;
 }
 
-.audit-list li {
+.tune-up-list li,
+.membership-list li,
+.retainer-list li {
   position: relative;
   padding-left: 1.75rem;
 }
 
-.audit-list li::before {
+.tune-up-list li::before,
+.membership-list li::before,
+.retainer-list li::before {
   content: "";
   position: absolute;
   left: 0.35rem;
@@ -456,19 +516,25 @@ p {
   box-shadow: 0 8px 24px rgba(222, 125, 80, 0.4);
 }
 
-.audit__cta {
+.tune-up__cta,
+.membership__cta,
+.retainer__cta {
   justify-content: flex-start;
   align-items: flex-start;
   gap: var(--space-1);
 }
 
-.audit__note {
+.tune-up__note,
+.membership__note,
+.retainer__note {
   font-size: var(--step--1);
   color: var(--fg-muted);
   max-width: 28rem;
 }
 
-.audit-card {
+.tune-up-card,
+.membership-card,
+.retainer-card {
   background: var(--surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -477,13 +543,17 @@ p {
   align-self: stretch;
 }
 
-.audit-highlights {
+.tune-up-highlights,
+.membership-highlights,
+.retainer-highlights {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-1);
 }
 
-.audit-pill {
+.tune-up-pill,
+.membership-pill,
+.retainer-pill {
   display: inline-flex;
   align-items: center;
   gap: var(--space-0);
@@ -493,20 +563,27 @@ p {
   border: 1px solid rgba(222, 125, 80, 0.4);
 }
 
-.audit-pill__label {
+.tune-up-pill__label,
+.membership-pill__label,
+.retainer-pill__label {
   font-size: var(--step--1);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
 }
 
-.audit-pill__value {
+.tune-up-pill__value,
+.membership-pill__value,
+.retainer-pill__value {
   font-weight: 700;
   color: var(--fg);
 }
 
-.audit-card__body {
+.tune-up-card__body,
+.membership-card__body,
+.retainer-card__body {
   color: var(--fg);
+  padding-top: var(--space-3);
 }
 
 .principles__list {
@@ -658,6 +735,13 @@ p {
   height: auto;
   display: block;
   margin: var(--space-1) auto 0;
+  padding: var(--space-1);
+}
+
+.email {
+  font-size: var(--step-0);
+  color: var(--fg-muted);
+  padding: var(--space-3) 0;
 }
 
 .site-footer {
@@ -724,8 +808,8 @@ p {
 @media (max-width: 48rem) {
   .site-nav {
     align-items: flex-start;
-    padding-top: var(--space-1);
-    padding-bottom: var(--space-1);
+    height: auto;
+    padding: var(--space-1) var(--space-2);
   }
 
   .nav-toggle {
@@ -874,8 +958,12 @@ p {
     grid-column: 2;
     grid-row: 1 / span 2;
     align-self: center;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact .cal-cta__row {
+    justify-content: center;
   }
 }
 
