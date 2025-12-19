@@ -482,22 +482,16 @@ p {
   z-index: 1;
 }
 
-.tune-up,
-.retainer,
-.build-out {
+.offering {
   overflow: hidden;
 }
 
-.tune-up__layout,
-.retainer__layout,
-.build-out__layout {
+.offering__layout {
   align-items: stretch;
   gap: var(--space-4);
 }
 
-.tune-up-list,
-.retainer-list,
-.build-out-list {
+.offering__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -506,16 +500,12 @@ p {
   max-width: 40rem;
 }
 
-.tune-up-list li,
-.retainer-list li,
-.build-out-list li {
+.offering__list li {
   position: relative;
   padding-left: 1.75rem;
 }
 
-.tune-up-list li::before,
-.retainer-list li::before,
-.build-out-list li::before {
+.offering__list li::before {
   content: "";
   position: absolute;
   left: 0.35rem;
@@ -527,45 +517,43 @@ p {
   box-shadow: 0 8px 24px rgba(222, 125, 80, 0.4);
 }
 
-.tune-up__cta,
-.retainer__cta,
-.build-out__cta {
+.offering__cta {
   justify-content: flex-start;
   align-items: flex-start;
   gap: var(--space-1);
 }
 
-.tune-up__note,
-.retainer__note,
-.build-out__note {
+.offering__note {
   font-size: var(--step--1);
   color: var(--fg-muted);
   max-width: 28rem;
 }
 
-.tune-up-card,
-.retainer-card,
-.build-out-card {
+.offering-card {
   background: var(--surface);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   padding: var(--space-3);
-  box-shadow: var(--shadow);
+  box-shadow: 0 14px 32px rgba(31, 31, 31, 0.5);
   align-self: stretch;
 }
 
-.tune-up-highlights,
-.retainer-highlights,
-.build-out-highlights {
+.offering-card__header {
+  margin: calc(var(--space-3) * -1) calc(var(--space-3) * -1) var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(222, 125, 80, 0.08);
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.offering__highlights {
   display: grid;
   gap: var(--space-1);
   justify-items: start;
   align-items: start;
 }
 
-.tune-up-pill,
-.retainer-pill,
-.build-out-pill {
+.offering-pill {
   display: inline-flex;
   align-items: center;
   gap: var(--space-0);
@@ -575,27 +563,31 @@ p {
   border: 1px solid rgba(222, 125, 80, 0.4);
 }
 
-.tune-up-pill__label,
-.retainer-pill__label,
-.build-out-pill__label {
+.offering-pill__label {
   font-size: var(--step--1);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--fg-muted);
 }
 
-.tune-up-pill__value,
-.retainer-pill__value,
-.build-out-pill__value {
+.offering-pill__value {
   font-weight: 700;
   color: var(--fg);
 }
 
-.tune-up-card__body,
-.retainer-card__body,
-.build-out-card__body {
+.offering-card__body {
   color: var(--fg);
   padding-top: var(--space-3);
+}
+
+.offering-card__body--preserve {
+  white-space: pre-line;
+}
+
+.offering-card__title {
+  font-size: var(--step-2);
+  margin-bottom: var(--space-1);
+  color: var(--fg);
 }
 
 .principles__list {
@@ -857,6 +849,9 @@ p {
   .hero {
     padding-bottom: clamp(3rem, 10vw, 5rem);
     padding-inline: var(--space-2);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-body {
