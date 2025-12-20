@@ -632,6 +632,26 @@ p {
   order: 1;
 }
 
+.about-feature--wrap .about-feature__layout {
+  display: block;
+}
+
+.about-feature--wrap .about-feature__media {
+  float: left;
+  width: min(320px, 42vw);
+  margin: 0 var(--space-3) var(--space-2) 0;
+}
+
+.about-feature--wrap .about-feature__image {
+  box-shadow: var(--shadow);
+}
+
+.about-feature--wrap .about-feature__layout::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .carousel {
   position: relative;
   display: grid;
@@ -1058,6 +1078,12 @@ p {
 
   .about-feature--reverse .about-feature__media {
     order: 1;
+  }
+
+  .about-feature--wrap .about-feature__media {
+    float: none;
+    width: 100%;
+    margin: 0 0 var(--space-2) 0;
   }
 }
 
