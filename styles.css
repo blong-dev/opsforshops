@@ -104,12 +104,24 @@ a {
 }
 
 .hero {
-  min-height: clamp(70vh, 80vh, 90vh);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: var(--space-3) 0;
+  min-height: clamp(55vh, 68vh, 80vh);
+}
+
+.hero__layout {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  display: grid;
+  place-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  min-height: clamp(50vh, 64vh, 78vh);
 }
 
 .hero__content {
@@ -118,7 +130,7 @@ a {
   display: grid;
   justify-items: center;
   gap: var(--space-2);
-  max-width: min(54rem, 92vw);
+  width: min(54rem, 100%);
   margin: 0 auto;
   text-align: center;
 }
@@ -131,20 +143,15 @@ a {
   z-index: 0;
 }
 
-.hero-body {
-  position: static;
-  margin-top: var(--space-2);
-  min-height: auto;
-}
-
 .hero__bee {
+  order: 0;
   position: absolute;
-  top: 25%;
-  left:20%;
-  transform: translateX(-50%);
-  width: clamp(12rem, 28vw, 21rem);
+  left: clamp(-1rem, 5vw, 3rem);
+  top: 50%;
+  transform: translate(-60%, -50%);
+  width: clamp(10rem, 22vw, 18rem);
   height: auto;
-  opacity: 0.9;
+  opacity: 0.95;
   pointer-events: none;
   z-index: 1;
 }
@@ -197,16 +204,15 @@ p {
 .hero-points {
   list-style: none;
   margin: 0;
-  margin-left: 12rem;
   padding: 0;
   display: grid;
   gap: var(--space-1);
-  justify-items: start;
+  justify-items: center;
   justify-content: center;
   font-family: "Cardo", "General Sans", "Inter", "Segoe UI", system-ui, sans-serif;
   font-size: clamp(1.5rem, 1.6vw + 1.3rem, 2.2rem);
   color: var(--fg);
-  text-align: left;
+  text-align: center;
 }
 
 .hero-points__item {
@@ -847,37 +853,39 @@ p {
   }
 
   .hero {
-    padding-bottom: clamp(3rem, 10vw, 5rem);
-    padding-inline: var(--space-2);
-    justify-content: center;
-    align-items: center;
+    padding: var(--space-2) var(--space-1) var(--space-2);
     text-align: center;
   }
 
-  .hero-body {
-    position: static;
-    min-height: clamp(10rem, 30vw, 14rem);
-    padding-bottom: clamp(2.5rem, 8vw, 4rem);
-    margin-top: var(--space-2);
+  .hero__layout {
+    padding: 0 var(--space-1);
+    gap: var(--space-1);
   }
+
+  .hero__layout {
+    align-items: center;
+  }
+
   .hero__content {
     width: 100%;
     max-width: 100%;
-    flex: 1 1 100%;
   }
 
   .hero__bee {
     position: static;
-    display: block;
     margin: clamp(1rem, 4vw, 1.75rem) auto 0;
     transform: none;
-    width: clamp(9rem, 32vw, 14rem);
+    width: clamp(10rem, 36vw, 17rem);
     opacity: 0.9;
+    order: 2;
   }
 
   .hero-points {
     margin: 0 auto;
-    margin-left: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
   }
 
   .cal-cta__row {
@@ -942,8 +950,16 @@ p {
     align-items: center;
   }
 
+  .hero__layout {
+    min-height: clamp(70vh, 80vh, 90vh);
+  }
+
   .hero__content {
-    max-width: min(54rem, 92vw);
+    max-width: min(48rem, 90vw);
+  }
+
+  .hero__bee {
+    width: clamp(15rem, 28vw, 26rem);
   }
 
   #contact .grid {
