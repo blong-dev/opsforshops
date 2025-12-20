@@ -604,6 +604,34 @@ p {
   gap: var(--space-1);
 }
 
+.about-feature__layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.about-feature__media {
+  position: relative;
+}
+
+.about-feature__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  object-fit: cover;
+}
+
+.about-feature--reverse .about-feature__media {
+  order: 2;
+}
+
+.about-feature--reverse .about-feature__content {
+  order: 1;
+}
+
 .carousel {
   position: relative;
   display: grid;
@@ -1026,6 +1054,10 @@ p {
 
   .cal-cta__row .btn {
     margin-left: var(--space-1);
+  }
+
+  .about-feature--reverse .about-feature__media {
+    order: 1;
   }
 }
 
