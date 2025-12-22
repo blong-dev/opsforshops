@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Article Title | Insights | Ops for Shops</title>
+    <meta
+      name="description"
+      content="Replace this text with a one-sentence summary of the article."
+    />
+    <meta property="og:title" content="Article Title | Insights | Ops for Shops" />
+    <meta
+      property="og:description"
+      content="Replace this text with a one-sentence summary of the article."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://blong.dev/insights/article-template" />
+    <meta property="og:image" content="https://blong.dev/bee1.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Article Title | Insights | Ops for Shops" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-brand" href="https://blong.dev" aria-label="blong.dev home">
+          <img class="nav-brand__logo" src="../static/Bee1.png" alt="blong.dev logo" width="28" height="28" />
+          <span aria-hidden="true">blong.dev</span>
+          <span class="visually-hidden">blong.dev home</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a class="nav-link" href="/">Home</a></li>
+          <li><a class="nav-link" href="/#services">Services</a></li>
+          <li><a class="nav-link" href="/about">About</a></li>
+          <li><a class="nav-link" href="/#contact">Contact</a></li>
+          <li>
+            <a
+              class="nav-link"
+              href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/sbo-tune-up'}); return false;"
+              aria-label="Get started with a Small Business Tune-Up"
+            >Get Started</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="section section--tinted" aria-labelledby="article-title">
+        <div class="container flow">
+          <p class="eyebrow">Insights</p>
+          <div class="article-nav" aria-label="Article navigation (top)">
+            <a class="article-nav__link" href="/insights">← Back to Insights</a>
+            <div class="article-nav__adjacent">
+              <a class="article-nav__link" href="/insights/previous-article.html">← Previous article title</a>
+              <a class="article-nav__link" href="/insights/next-article.html">Next article title →</a>
+            </div>
+          </div>
+
+          <h1 id="article-title">Article Title</h1>
+          <p class="lead">Use this intro to set the scene for the reader. Replace everything in this template with your article content.</p>
+
+          <article class="flow article-body">
+            <p>
+              Replace this placeholder body copy with the real article. Use standard HTML elements (h2, h3, p, ul/ol) and keep everything inside the
+              <code>article.article-body</code> container.
+            </p>
+            <p>
+              Tip: keep paragraphs short and scannable. Add code snippets or images as needed.
+            </p>
+          </article>
+
+          <div class="article-nav" aria-label="Article navigation (bottom)">
+            <a class="article-nav__link" href="/insights">← Back to Insights</a>
+            <div class="article-nav__adjacent">
+              <a class="article-nav__link" href="/insights/previous-article.html">← Previous article title</a>
+              <a class="article-nav__link" href="/insights/next-article.html">Next article title →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer__content">
+        <p>&copy; <span id="year"></span> Blong Enterprises LLC. All rights reserved.</p>
+        <p>braedon@blong.dev</p>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/about">About</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="../script.js" defer></script>
+  </body>
+</html>
