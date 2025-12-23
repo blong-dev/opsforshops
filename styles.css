@@ -1132,11 +1132,14 @@ p {
   font-weight: 700;
   color: var(--fg);
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .link-tree__link:hover,
 .link-tree__link:focus-visible {
   text-decoration: underline;
+  color: var(--accent-strong);
+  text-decoration-color: var(--accent-strong);
 }
 
 .link-tree__description {
@@ -1170,11 +1173,14 @@ p {
   font-weight: 700;
   color: var(--fg);
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .article-nav__link:hover,
 .article-nav__link:focus-visible {
   text-decoration: underline;
+  color: var(--accent-strong);
+  text-decoration-color: var(--accent-strong);
 }
 
 .article-body {
@@ -1188,4 +1194,17 @@ p {
 .article-body h2 {
   margin-top: var(--space-2);
   margin-bottom: var(--space-0);
+}
+
+.article-body a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 31, 31, 0.25);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.article-body a:hover,
+.article-body a:focus-visible {
+  color: var(--accent-strong);
+  text-decoration-color: var(--accent-strong);
 }
