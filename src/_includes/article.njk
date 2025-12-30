@@ -1,0 +1,31 @@
+---
+layout: base.njk
+isInsight: true
+---
+<section class="section section--tinted" aria-labelledby="article-title">
+  <div class="container flow">
+    <p class="eyebrow">Insights</p>
+    <div class="article-nav" aria-label="Article navigation (top)">
+      <a class="article-nav__link" href="/insights">← Back to Insights</a>
+      <div class="article-nav__adjacent">
+        {% if prevArticle %}<a class="article-nav__link" href="{{ prevArticle.url }}">← Previous: {{ prevArticle.title }}</a>{% endif %}
+        {% if nextArticle %}<a class="article-nav__link" href="{{ nextArticle.url }}">Next: {{ nextArticle.title }} →</a>{% else %}<span aria-hidden="true"></span>{% endif %}
+      </div>
+    </div>
+
+    <h1 id="article-title">{{ articleTitle }}</h1>
+    {% if lead %}<p class="lead">{{ lead }}</p>{% endif %}
+
+    <article class="flow article-body">
+      {{ content | safe }}
+    </article>
+
+    <div class="article-nav" aria-label="Article navigation (bottom)">
+      <a class="article-nav__link" href="/insights">← Back to Insights</a>
+      <div class="article-nav__adjacent">
+        {% if prevArticle %}<a class="article-nav__link" href="{{ prevArticle.url }}">← Previous: {{ prevArticle.title }}</a>{% endif %}
+        {% if nextArticle %}<a class="article-nav__link" href="{{ nextArticle.url }}">Next: {{ nextArticle.title }} →</a>{% else %}<span aria-hidden="true"></span>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>

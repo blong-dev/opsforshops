@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:title" content="{{ ogTitle or title }}" />
+    <meta property="og:description" content="{{ ogDescription or description }}" />
+    <meta property="og:type" content="{{ ogType or 'website' }}" />
+    <meta property="og:url" content="{{ ogUrl }}" />
+    <meta property="og:image" content="https://opsforshops.com/bee1.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ twitterTitle or title }}" />
+    {% if twitterDescription %}<meta name="twitter:description" content="{{ twitterDescription }}" />{% endif %}
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.ico' if isInsight else 'favicon.ico' }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ '/styles.css' if isInsight else 'styles.css' }}" />
+    <!-- Calendly widget CSS/JS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-brand" href="https://opsforshops.com" aria-label="Ops for Shops home">
+          <img class="nav-brand__logo" src="{{ 'static/Bee1.png' if not isInsight else '/static/Bee1.png' }}" alt="Ops for Shops logo" width="28" height="28" />
+          <span aria-hidden="true">Ops for Shops</span>
+          <span class="visually-hidden">Ops for Shops home</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a class="nav-link{% if navActive == 'home' %} is-active{% endif %}" href="{{ '/' if isInsight else '#home' }}">Home</a></li>
+          <li><a class="nav-link{% if navActive == 'services' %} is-active{% endif %}" href="/#services">Services</a></li>
+          <li><a class="nav-link{% if navActive == 'about' %} is-active{% endif %}" href="/about">About</a></li>
+          <li><a class="nav-link{% if navActive == 'contact' %} is-active{% endif %}" href="/#contact">Contact</a></li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/sbo-tune-up'}); return false;"
+              aria-label="Get started with a Small Business Tune-Up"
+            >Get Started</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      {{ content | safe }}
+    </main>
+    <footer class="site-footer">
+      <div class="container footer__content">
+        <p>&copy; <span id="year"></span> Blong Enterprises LLC. All rights reserved.</p>
+        <p>info@opsforshops.com</p>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/about">About</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="{{ '/script.js' if isInsight else 'script.js' }}" defer></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "opsforshops",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blong-dev/blongdotdev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blong-dev/blongdotdev/issues"
+  },
+  "homepage": "https://github.com/blong-dev/blongdotdev#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
