@@ -283,7 +283,7 @@ function initContactForm() {
       console.error("Form submission error:", error);
       showToast(
         toast,
-        "Something went wrong sending your note. Please email land@braedonlong.com directly.",
+        "Something went wrong sending your note. Please email b@opsforshops.com directly.",
         "error"
       );
     } finally {
