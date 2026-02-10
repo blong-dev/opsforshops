@@ -128,6 +128,7 @@ a {
   position: relative;
   z-index: 2;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   gap: var(--space-2);
   width: min(54rem, 100%);
@@ -408,7 +409,7 @@ p {
 .section-header {
   display: grid;
   gap: var(--space-1);
-  max-width: 36rem;
+  max-width: 52rem;
 }
 
 .section--tinted {
@@ -810,9 +811,10 @@ p {
 
 .footer__content {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  align-items: center;
+  justify-content: space-between;
   font-size: var(--step--1);
 }
 
@@ -982,7 +984,9 @@ p {
   }
 
   .footer__content {
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
