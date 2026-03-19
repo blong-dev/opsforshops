@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("script.js");
+  eleventyConfig.addPassthroughCopy("ops-health.js");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
@@ -10,6 +11,7 @@ module.exports = function(eleventyConfig) {
   // Watch CSS for changes
   eleventyConfig.addWatchTarget("styles.css");
   eleventyConfig.addWatchTarget("script.js");
+  eleventyConfig.addWatchTarget("ops-health.js");
 
   return {
     dir: {

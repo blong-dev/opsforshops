@@ -1212,3 +1212,344 @@ p {
   color: var(--accent-strong);
   text-decoration-color: var(--accent-strong);
 }
+
+/* ── Ops Health Diagnostic ──────────────────────────────────────────────────── */
+
+.ops-health__header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.ops-health__legend {
+  font-family: "Cardo", serif;
+  font-size: var(--step-2);
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: var(--space-2);
+}
+
+/* Progress bar */
+.ops-health__progress {
+  display: flex;
+  gap: var(--space-0);
+  margin-bottom: var(--space-3);
+}
+
+.ops-health__progress-segment {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 999px;
+  transition: background 0.3s ease;
+}
+
+.ops-health__progress-segment.is-complete {
+  background: var(--accent-strong);
+}
+
+.ops-health__progress-segment.is-active {
+  background: var(--accent);
+}
+
+/* Step visibility */
+.ops-health__step {
+  display: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ops-health__step.is-active {
+  display: block;
+}
+
+/* Extend form-field for selects */
+.ops-health__step select {
+  width: 100%;
+  padding: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: var(--step-0);
+  background: var(--surface);
+  color: var(--fg);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235c5c5c' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-1) center;
+}
+
+.ops-health__step select:focus-visible {
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 3px rgba(222, 125, 80, 0.18);
+  outline: none;
+}
+
+/* Radio & Checkbox groups */
+.ops-health__radios,
+.ops-health__checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-1);
+}
+
+.ops-health__radio-label,
+.ops-health__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  font-size: var(--step-0);
+}
+
+.ops-health__radio-label:hover,
+.ops-health__checkbox-label:hover {
+  border-color: var(--accent);
+  background: rgba(247, 192, 139, 0.08);
+}
+
+.ops-health__radio-label:has(input:checked),
+.ops-health__checkbox-label:has(input:checked) {
+  border-color: var(--accent-strong);
+  background: rgba(247, 192, 139, 0.12);
+}
+
+.ops-health__radio-label input,
+.ops-health__checkbox-label input {
+  accent-color: var(--accent-strong);
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+/* Range slider */
+.ops-health__range-wrap {
+  padding: var(--space-1) 0;
+}
+
+.ops-health__range-wrap input[type="range"] {
+  width: 100%;
+  height: 6px;
+  appearance: none;
+  background: var(--border);
+  border-radius: 999px;
+  outline: none;
+}
+
+.ops-health__range-wrap input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  cursor: pointer;
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.ops-health__range-wrap input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  cursor: pointer;
+  border: 2px solid var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.ops-health__range-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-0);
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+.ops-health__range-value {
+  font-weight: 700;
+  font-size: var(--step-1);
+  color: var(--accent-strong);
+}
+
+/* Hint text */
+.ops-health__hint {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  font-weight: 400;
+}
+
+/* Step navigation */
+.ops-health__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-3);
+}
+
+/* ── Scorecard ──────────────────────────────────────────────────────────────── */
+
+.scorecard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-4);
+}
+
+.scorecard__header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.scorecard__score {
+  font-family: "Cardo", serif;
+  font-size: var(--step-4);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: var(--space-2) 0;
+}
+
+.score--red { color: #c0392b; }
+.score--yellow { color: #d4a017; }
+.score--green { color: #27ae60; }
+
+.scorecard__bar {
+  max-width: 400px;
+  margin: 0 auto var(--space-2);
+}
+
+.scorecard__bar-track {
+  width: 100%;
+  height: 10px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.scorecard__bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s ease;
+  width: 0%;
+}
+
+.bar--red { background: #c0392b; }
+.bar--yellow { background: linear-gradient(90deg, #c0392b, #d4a017); }
+.bar--green { background: linear-gradient(90deg, #c0392b, #d4a017, #27ae60); }
+
+.scorecard__percentile {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+}
+
+/* Blind spots */
+.scorecard__blindspots {
+  margin-top: var(--space-3);
+}
+
+.scorecard__blindspots h2 {
+  font-family: "Cardo", serif;
+  font-size: var(--step-2);
+  margin-bottom: var(--space-2);
+}
+
+.scorecard__blindspot {
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-2);
+  border-left: 4px solid var(--accent-strong);
+}
+
+.scorecard__blindspot h3 {
+  font-family: "Cardo", serif;
+  font-size: var(--step-1);
+  margin: 0 0 var(--space-0);
+}
+
+.scorecard__blindspot p {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: var(--step-0);
+}
+
+/* Email capture */
+.scorecard__email-capture {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.scorecard__email-capture h3 {
+  font-family: "Cardo", serif;
+  font-size: var(--step-1);
+  margin: 0 0 var(--space-0);
+}
+
+.scorecard__email-capture p {
+  color: var(--fg-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.scorecard__email-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.scorecard__email-form .form-field {
+  flex: 1;
+  min-width: 180px;
+  text-align: left;
+}
+
+.scorecard__email-form .btn {
+  align-self: flex-end;
+  margin-bottom: 1px;
+}
+
+/* CTA section */
+.scorecard__cta {
+  text-align: center;
+  padding: var(--space-4) 0;
+}
+
+.scorecard__cta h3 {
+  font-family: "Cardo", serif;
+  font-size: var(--step-2);
+  margin: 0 0 var(--space-1);
+}
+
+.scorecard__cta p {
+  color: var(--fg-muted);
+  max-width: 600px;
+  margin: 0 auto var(--space-3);
+}
+
+/* Mobile adjustments */
+@media (max-width: 48rem) {
+  .ops-health__radios,
+  .ops-health__checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .scorecard__email-form {
+    flex-direction: column;
+  }
+
+  .scorecard__email-form .form-field {
+    min-width: 100%;
+  }
+}

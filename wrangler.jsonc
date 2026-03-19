@@ -1,7 +1,9 @@
 {
   "name": "opsforshops",
   "compatibility_date": "2026-02-10",
+  "main": "worker.js",
   "assets": {
-    "directory": "./_site"
+    "directory": "./_site",
+    "binding": "ASSETS"
   }
 }

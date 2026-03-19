@@ -1,0 +1,384 @@
+---
+layout: base.njk
+title: "Ops Health Diagnostic | Ops for Shops"
+description: "Free 4-minute diagnostic. See where your operations stand and what's costing you time and money."
+ogTitle: "Ops Health Diagnostic | Ops for Shops"
+ogDescription: "Free 4-minute diagnostic. See where your operations stand."
+ogType: website
+ogUrl: https://opsforshops.com/ops-health
+twitterTitle: "Ops Health Diagnostic | Ops for Shops"
+permalink: /ops-health.html
+---
+
+<section class="section" aria-labelledby="ops-health-title">
+  <div class="container">
+
+    {# ── Form ── #}
+    <div id="ops-health-form">
+      <div class="ops-health__header flow">
+        <p class="eyebrow">Free Diagnostic</p>
+        <h1 id="ops-health-title">How healthy are your operations?</h1>
+        <p class="lead">Answer a few questions. Get an instant scorecard with blind spots you can act on.</p>
+      </div>
+
+      <div class="ops-health__progress" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" aria-label="Form progress">
+        <div class="ops-health__progress-segment is-active" data-step="1"></div>
+        <div class="ops-health__progress-segment" data-step="2"></div>
+        <div class="ops-health__progress-segment" data-step="3"></div>
+        <div class="ops-health__progress-segment" data-step="4"></div>
+      </div>
+
+      <form id="diagnostic-form" novalidate>
+
+        {# ── Step 1: Revenue & Scale ── #}
+        <fieldset class="ops-health__step is-active" data-step="1">
+          <legend class="ops-health__legend">Revenue &amp; Scale</legend>
+
+          <div class="form-field">
+            <label for="revenue">What's your approximate annual revenue?</label>
+            <select id="revenue" name="revenue" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="under_250k">Under $250K</option>
+              <option value="250k_500k">$250K – $500K</option>
+              <option value="500k_1m">$500K – $1M</option>
+              <option value="1m_5m">$1M – $5M</option>
+              <option value="5m_plus">$5M+</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="employees">How many employees do you have?</label>
+            <select id="employees" name="employees" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="solo">Just me</option>
+              <option value="2_5">2 – 5</option>
+              <option value="6_15">6 – 15</option>
+              <option value="16_50">16 – 50</option>
+              <option value="50_plus">50+</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>How do most of your sales happen?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sales_channel" value="online" required />
+                <span>Mostly online</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sales_channel" value="in_person" />
+                <span>Mostly in-person</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sales_channel" value="both" />
+                <span>About equal</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sales_channel" value="other" />
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="ops-health__nav">
+            <span></span>
+            <button type="button" class="btn btn-primary ops-health__next">Next</button>
+          </div>
+        </fieldset>
+
+        {# ── Step 2: Operations Maturity ── #}
+        <fieldset class="ops-health__step" data-step="2">
+          <legend class="ops-health__legend">Operations Maturity</legend>
+
+          <div class="form-field">
+            <label>How do you currently track inventory?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="inventory" value="manual" required />
+                <span>Spreadsheets or manual</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="inventory" value="basic_software" />
+                <span>Basic software</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="inventory" value="integrated" />
+                <span>Integrated system</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="inventory" value="na" />
+                <span>N/A</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>How often do you reconcile your financials?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="reconciliation" value="daily_weekly" required />
+                <span>Daily or weekly</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="reconciliation" value="monthly" />
+                <span>Monthly</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="reconciliation" value="quarterly" />
+                <span>Quarterly</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="reconciliation" value="rarely" />
+                <span>Rarely or never</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Do you have documented SOPs for your core processes?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sops" value="yes" required />
+                <span>Yes, most processes</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sops" value="some" />
+                <span>Some key ones</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="sops" value="no" />
+                <span>No</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>How long does it take to onboard a new employee to core tasks?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="onboarding" value="under_1_week" required />
+                <span>Under 1 week</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="onboarding" value="1_2_weeks" />
+                <span>1 – 2 weeks</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="onboarding" value="3_4_weeks" />
+                <span>3 – 4 weeks</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="onboarding" value="over_1_month" />
+                <span>More than a month</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="onboarding" value="na" />
+                <span>N/A — no employees</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="ops-health__nav">
+            <button type="button" class="btn btn-secondary ops-health__back">Back</button>
+            <button type="button" class="btn btn-primary ops-health__next">Next</button>
+          </div>
+        </fieldset>
+
+        {# ── Step 3: Pain Signals ── #}
+        <fieldset class="ops-health__step" data-step="3">
+          <legend class="ops-health__legend">Pain Signals</legend>
+
+          <div class="form-field">
+            <label>What's your biggest operational headache right now?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="headache" value="data_entry" required />
+                <span>Data entry &amp; manual work</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="headache" value="systems_dont_talk" />
+                <span>Systems don't talk to each other</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="headache" value="cant_trust_numbers" />
+                <span>Can't trust the numbers</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="headache" value="employee_training" />
+                <span>Employee training &amp; retention</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="headache" value="scaling" />
+                <span>Scaling bottleneck</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="headache" value="other" />
+                <span>Something else</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="data_trust">On a scale of 1–10, how much do you trust the data you make decisions from?</label>
+            <div class="ops-health__range-wrap">
+              <input type="range" id="data_trust" name="data_trust" min="1" max="10" value="5" />
+              <div class="ops-health__range-labels">
+                <span>1 — Flying blind</span>
+                <span id="data-trust-value" class="ops-health__range-value">5</span>
+                <span>10 — Fully confident</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>How many hours per week do you spend on tasks that should be automated or delegated?</label>
+            <div class="ops-health__radios">
+              <label class="ops-health__radio-label">
+                <input type="radio" name="automatable_hours" value="0_2" required />
+                <span>0 – 2 hours</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="automatable_hours" value="3_5" />
+                <span>3 – 5 hours</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="automatable_hours" value="6_10" />
+                <span>6 – 10 hours</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="automatable_hours" value="10_plus" />
+                <span>10+ hours</span>
+              </label>
+              <label class="ops-health__radio-label">
+                <input type="radio" name="automatable_hours" value="no_idea" />
+                <span>No idea</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="ops-health__nav">
+            <button type="button" class="btn btn-secondary ops-health__back">Back</button>
+            <button type="button" class="btn btn-primary ops-health__next">Next</button>
+          </div>
+        </fieldset>
+
+        {# ── Step 4: Tech Stack ── #}
+        <fieldset class="ops-health__step" data-step="4">
+          <legend class="ops-health__legend">Your Tech Stack</legend>
+
+          <div class="form-field">
+            <label>Which tools do you currently use? <span class="ops-health__hint">(Select all that apply)</span></label>
+            <div class="ops-health__checkboxes">
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="quickbooks" />
+                <span>QuickBooks</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="xero" />
+                <span>Xero</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="square" />
+                <span>Square</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="shopify" />
+                <span>Shopify</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="clover" />
+                <span>Clover</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="toast" />
+                <span>Toast</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="hubspot" />
+                <span>HubSpot</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="mailchimp" />
+                <span>Mailchimp</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="excel_sheets" />
+                <span>Excel / Google Sheets</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="pen_paper" />
+                <span>Pen &amp; paper</span>
+              </label>
+              <label class="ops-health__checkbox-label">
+                <input type="checkbox" name="tools" value="other" />
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="ops-health__nav">
+            <button type="button" class="btn btn-secondary ops-health__back">Back</button>
+            <button type="button" class="btn btn-primary ops-health__submit">See My Score</button>
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+
+    {# ── Results ── #}
+    <div id="ops-health-results" hidden>
+
+      <div class="scorecard">
+        <div class="scorecard__header">
+          <p class="eyebrow">Your Ops Health Score</p>
+          <div class="scorecard__score" id="score-value">—</div>
+          <div class="scorecard__bar">
+            <div class="scorecard__bar-track">
+              <div class="scorecard__bar-fill" id="score-bar-fill"></div>
+            </div>
+          </div>
+          <p class="scorecard__percentile" id="score-percentile"></p>
+        </div>
+
+        <div class="scorecard__blindspots" id="blindspots-container">
+          <h2>Blind Spots We Found</h2>
+        </div>
+      </div>
+
+      <div class="scorecard__email-capture">
+        <h3>Want a copy of your scorecard?</h3>
+        <p>We'll send it to your inbox. No spam, no strings.</p>
+        <form id="email-capture-form" class="scorecard__email-form" novalidate>
+          <div class="form-field">
+            <label for="lead-name">Name</label>
+            <input id="lead-name" name="lead_name" type="text" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="lead-email">Email</label>
+            <input id="lead-email" name="lead_email" type="email" autocomplete="email" required inputmode="email" />
+            <span class="error" id="lead-email-error"></span>
+          </div>
+          <button class="btn btn-primary" type="submit">Send My Scorecard</button>
+        </form>
+      </div>
+
+      <div class="scorecard__cta">
+        <h3>Ready to fix what's costing you?</h3>
+        <p>The Small Business Tune-Up is a 90-minute deep-dive. We pull actual data from your tools, find the single highest-ROI fix, and give you a 14-day plan.</p>
+        <div class="cta-group" style="flex-direction:column; align-items:center;">
+          <a
+            class="btn btn-primary"
+            href="#"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/braedonlong/sbo-tune-up'}); return false;"
+            aria-label="Book a Small Business Tune-Up"
+          >Book a Tune-Up — $499</a>
+          <p class="eyebrow">Credited toward any project that follows.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="ops-health.js" defer></script>
